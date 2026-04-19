@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: cravbank
+  profiles:
+    default: dev
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  web:
+    error:
+      include-message: always
+      include-binding-errors: always
+
+server:
+  port: 8080
+
+cravbank:
+  jwt:
+    issuer: cravbank
+    access-token-ttl: PT15M
+    refresh-token-ttl: P30D
+  security:
+    invitation:
+      default-ttl: P7D
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs

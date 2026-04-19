@@ -1,0 +1,19 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+  jpa:
+    show-sql: false
+
+cravbank:
+  jwt:
+    secret: test-secret-that-is-at-least-32-bytes-long-for-hs256!!
+    access-token-ttl: PT15M
+    refresh-token-ttl: P30D
+  cors:
+    allowed-origins: "*"
+
+logging:
+  level:
+    com.cravero.cravbank: INFO
+    org.springframework.security: WARN

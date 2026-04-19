@@ -1,0 +1,21 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cravbank
+    username: cravbank
+    password: ${DB_PASSWORD:cravbank}
+  jpa:
+    show-sql: true
+
+logging:
+  level:
+    com.cravero.cravbank: DEBUG
+    org.springframework.security: DEBUG
+
+cravbank:
+  jwt:
+    secret: ${JWT_SECRET:dev-secret-change-me-at-least-32-bytes-long-!!}
+  cors:
+    allowed-origins: "*"
