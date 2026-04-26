@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 CravBank is a Spring Boot web service that integrates with the [EnableBanking API](https://enablebanking.com/) to retrieve banking account information.
 
 ## Build & Run Commands
-
+JAVA : C:\Users\celin\.jdks\temurin-25.0.2
 ```bash
 # Run the application
 ./gradlew bootRun

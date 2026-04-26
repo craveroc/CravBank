@@ -23,7 +23,7 @@ public class CorsConfig {
                 .map(String::trim)
                 .filter(s -> !s.isBlank())
                 .toList();
-        if (origins.size() == 1 && "*".equals(origins.get(0))) {
+        if (origins.size() == 1 && "*".equals(origins.getFirst())) {
             config.addAllowedOriginPattern("*");
         } else {
             config.setAllowedOrigins(origins);
