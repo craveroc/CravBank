@@ -7,8 +7,8 @@ import com.cravero.cravbank.auth.dto.RegisterRequest;
 import com.cravero.cravbank.auth.dto.TokenResponse;
 import com.cravero.cravbank.invitation.Invitation;
 import com.cravero.cravbank.invitation.InvitationRepository;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +26,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 class AuthControllerIntegrationTest extends AbstractIntegrationTest {
-
-    @Autowired
-    private MockMvc mockMvc;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -60,7 +57,7 @@ class AuthControllerIntegrationTest extends AbstractIntegrationTest {
 
     private Invitation createUsedInvitation() {
         Invitation inv = createInvitation();
-        inv.markUsed(UUID.randomUUID());
+        inv.markUsed(null);
         return invitationRepository.save(inv);
     }
 

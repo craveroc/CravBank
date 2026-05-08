@@ -4,7 +4,7 @@ import com.cravero.cravbank.common.ApiError;
 import com.cravero.cravbank.common.ErrorCode;
 import com.cravero.cravbank.security.JwtAuthenticationFilter;
 import com.cravero.cravbank.security.JwtProperties;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
